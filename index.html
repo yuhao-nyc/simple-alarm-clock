@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>A Simple Elegant Alarm Clock</title>
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+      <link href="style.css" rel="stylesheet">
+      <script src="script.js"></script>
+   </head>
+   <body onload=alarm()>
+      <div class="alarm-box">
+         <div id="alarmTime"></div>
+         <div class="date-now">
+           <div id="date-hour"></div>&nbsp;:
+           <div id="date-min"></div>&nbsp;&nbsp;:
+           <div id="date-sec"></div>
+           <div id="date-hint"></div>
+         </div>
+         <div class="date-select">
+           <select class="alarm-hour" onChange="setTime()">
+              <script type='text/javascript'>dateOptions(13);</script>
+           </select>
+           <select class="alarm-min" onChange="setTime()">
+              <script type='text/javascript'>dateOptions(60);</script>
+           </select>
+           <select class="alarm-sec" onChange="setTime()">
+              <script type='text/javascript'>dateOptions(60);</script>
+           </select>
+           <select class="alarm-hint" onChange="setTime()">
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+           </select>
+         </div>
+         <div id="msg">Alarm is OFF</div>
+      </div>
+      <div class="stand"></div>
+   </body>
+</html>

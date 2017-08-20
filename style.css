@@ -1,0 +1,51 @@
+body {
+  background-color: #ebeef2;
+}
+#alarmTime {
+  display: none;
+}
+.alarm-box {
+  width: 600px;
+  height: 220px;
+  text-align: center;
+  margin: 15% auto 0;
+  background-color: #ccc;
+  padding: 12px 20px 0;
+  font-family: 'Playfair Display', serif;
+  border: 10px solid #fff;
+  border-radius: 16px
+}
+.date-now {
+  font-size: 92px;
+}
+.date-now div {
+  display: inline-block;
+  width: 12%;
+}
+#date-hint {
+  font-size: 24px;
+}
+.date-select {
+  margin: 24px 0 12px;
+}
+.date-select > select {
+  padding: 5px 16px;
+  text-align: center;
+  width: 10%;
+  border: 1px solid #fff;
+  box-shadow: none;
+  background-color: transparent;
+}
+#msg {
+  font-size: 13px;
+  color: #4ea3d4;
+}
+.stand {
+  margin: 0 auto 0;
+	border-bottom: 52px solid #ddd;
+	border-left: 42px solid transparent;
+	border-right: 42px solid transparent;
+  border-radius: 6px;
+	height: 0;
+	width: 180px;
+}
