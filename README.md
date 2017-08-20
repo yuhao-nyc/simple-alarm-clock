@@ -1,5 +1,6 @@
 # simple-alarm-clock
 a clean, simple alarm clock with plain HTML, CSS, Javascript
+<a href="https://yuhao-nyc.github.io/simple-alarm-clock/">Demo</a>
 
 TODO List:
 1. Add a media sound to play when the alarm on, and add options to different sound tracks to play.
