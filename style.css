@@ -5,7 +5,7 @@ body {
   display: none;
 }
 .alarm-box {
-  width: 600px;
+  width: 620px;
   height: 220px;
   text-align: center;
   margin: 15% auto 0;
@@ -16,7 +16,7 @@ body {
   border-radius: 16px
 }
 .date-now {
-  font-size: 92px;
+  font-size: 96px;
 }
 .date-now div {
   display: inline-block;
@@ -26,7 +26,7 @@ body {
   font-size: 24px;
 }
 .date-select {
-  margin: 24px 0 12px;
+  margin: 18px 0 12px;
 }
 .date-select > select {
   padding: 5px 16px;
@@ -36,8 +36,18 @@ body {
   box-shadow: none;
   background-color: transparent;
 }
+.date-select > div {
+  width: 50%;
+  text-align: center;
+  font-size: 11px;
+  margin: 0 auto 2px;
+}
+.date-select > div > div {
+  display: inline-block;
+  width: 20%
+}
 #msg {
-  font-size: 13px;
+  font-size: 11px;
   color: #4ea3d4;
 }
 .stand {

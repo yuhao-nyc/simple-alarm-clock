@@ -12,7 +12,11 @@ function setTime() {
         document.getElementById('alarmTime').innerHTML = alarmHr + '*' + alarmMin + '*' + alarmSec + alarmHint;
         setCount = 1;
         document.getElementById('msg').innerHTML = 'Alarm is ON';
-        document.getElementById('msg').setAttribute('style', 'color: #ff768e');
+        document.getElementById('msg').setAttribute('style', 'color: yellow');
+}
+function audioAlarm() {
+    var audio = new Audio('alarm-sound.wav');
+    audio.play();
 }
 
 function alarm() {
@@ -26,8 +30,11 @@ function alarm() {
         min = min < 10 ? '0' + min : min,
         sec= sec < 10 ? '0' + sec : sec;
 
-        if (hour >= 12) {
-            hour = hr - 12;
+        if (hour > 12) {
+            hour = '0' + (hr - 12);
+            hint = 'PM';
+        }
+        if (hour == 12) {
             hint = 'PM';
         }
         if (hour == 0) {
@@ -40,10 +47,12 @@ function alarm() {
 
         var dateClone = document.getElementById('alarmTime').innerHTML,
             dateNow = hour + '*' + min + '*' + sec + hint;
+
         if (dateClone == dateNow && setCount) {
-            alert("Time to wake up! Sleepy head");
+            audioAlarm();
             setCount = 0;
-            document.getElementById('msg').innerHTML = 'Alarm is OFF';
+            document.getElementById('msg').innerHTML = 'Time to wake up!';
+            document.getElementById('msg').setAttribute('style', 'color: #ff768e')
         }
 
         setTimeout(function() {
