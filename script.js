@@ -52,7 +52,8 @@ function alarm() {
             audioAlarm();
             setCount = 0;
             document.getElementById('msg').innerHTML = 'Time to wake up!';
-            document.getElementById('msg').setAttribute('style', 'color: #ff768e')
+            document.getElementById('msg').setAttribute('style', 'color: #ff768e');
+            alert('Time to wake up!');
         }
 
         setTimeout(function() {
