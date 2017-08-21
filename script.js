@@ -24,12 +24,15 @@ function alarm() {
         hr = date.getHours(),
         min = date.getMinutes(),
         sec = date.getSeconds(),
-        hour = '0' + hr,
+        hour = hr,
         hint = 'AM',
         hr = hr < 10 ? '0' + hr : hr,
         min = min < 10 ? '0' + min : min,
         sec= sec < 10 ? '0' + sec : sec;
 
+        if (hour < 10) {
+            hour = '0' + hr;
+        }
         if (hour > 12) {
             hour = '0' + (hr - 12);
             hint = 'PM';
