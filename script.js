@@ -24,7 +24,7 @@ function alarm() {
         hr = date.getHours(),
         min = date.getMinutes(),
         sec = date.getSeconds(),
-        hour = hr,
+        hour = '0' + hr,
         hint = 'AM',
         hr = hr < 10 ? '0' + hr : hr,
         min = min < 10 ? '0' + min : min,
