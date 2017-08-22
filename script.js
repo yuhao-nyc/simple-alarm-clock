@@ -5,10 +5,12 @@ function setTime() {
         alarmMin = document.querySelector('.alarm-min').value,
         alarmSec = document.querySelector('.alarm-sec').value,
         alarmHint = document.querySelector('.alarm-hint').value,
-        alarmHr = alarmHr < 10 ? '0' + alarmHr : alarmHr,
         alarmMin = alarmMin < 10 ? '0' + alarmMin : alarmMin,
         alarmSec = alarmSec < 10 ? '0' + alarmSec : alarmSec;
 
+        if (alarmHr < 10 && alarmHr > 0) {
+            alarmHr = '0' + alarmHr;
+        }
         document.getElementById('alarmTime').innerHTML = alarmHr + '*' + alarmMin + '*' + alarmSec + alarmHint;
         setCount = 1;
         document.getElementById('msg').innerHTML = 'Alarm is ON';
@@ -30,7 +32,7 @@ function alarm() {
         min = min < 10 ? '0' + min : min,
         sec= sec < 10 ? '0' + sec : sec;
 
-        if (hour < 10) {
+        if (hour < 10 && hour > 0) {
             hour = '0' + hr;
         }
         if (hour > 12) {
@@ -39,9 +41,6 @@ function alarm() {
         }
         if (hour == 12) {
             hint = 'PM';
-        }
-        if (hour == 0) {
-            hour == 12;
         }
         document.getElementById('date-hour').innerHTML = hour;
         document.getElementById('date-min').innerHTML = min;
