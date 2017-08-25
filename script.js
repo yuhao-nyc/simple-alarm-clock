@@ -28,15 +28,17 @@ function alarm() {
         sec = date.getSeconds(),
         hour = hr,
         hint = 'AM',
-        hr = hr < 10 ? '0' + hr : hr,
         min = min < 10 ? '0' + min : min,
         sec= sec < 10 ? '0' + sec : sec;
-
-        if (hour < 10 && hour > 0) {
+        if (hour > 0 && hour < 10) {
             hour = '0' + hr;
         }
-        if (hour > 12) {
-            hour = '0' + (hr - 12);
+        if (hour > 12 && hour < 22) {
+            hour = '0' + (hour - 12);
+            hint = 'PM';
+        }
+        if (hour > 22) {
+            hour = hour - 12;
             hint = 'PM';
         }
         if (hour == 12) {
@@ -59,7 +61,7 @@ function alarm() {
         }
 
         setTimeout(function() {
-            alarm()
+            alarm();
         }, 500);
 }
 
